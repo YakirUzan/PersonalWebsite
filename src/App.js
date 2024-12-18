@@ -62,6 +62,11 @@ function App() {
             } else {
                 setActiveTab('home');
             }
+
+            const sections = document.querySelector('.sections');
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const stretch = 40 + (scrollPosition / maxScroll) * 40;
+            sections.style.backgroundPosition = `center ${stretch}%`;
         };
 
         window.addEventListener('scroll', handleScroll);
