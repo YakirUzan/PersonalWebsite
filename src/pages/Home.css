@@ -1,0 +1,98 @@
+
+.split-container {
+    display: flex; /* Enables Flexbox */
+    justify-content: space-between; /* Distributes space between the two sections */
+    align-items: center; /* Centers the content vertically */
+    height: 100vh; /* Full viewport height (optional) */
+}
+
+.text-section {
+    flex: 1;
+    padding-left: 10%;
+    text-align: left;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers the image inside the section */
+}
+
+.image-div {
+    width: 50vh;
+    height: 50vh;
+    background-image: url('/public/yakir_uzan.jpg'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    border-radius: 50%;
+    border: 6px solid var(--app-primary-color);
+}
+
+.sour-gummy {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.app-color-text {
+    color: var(--app-primary-color);
+}
+
+.social-buttons {
+    display: flex;
+    gap: 30px; /* Space between buttons */
+}
+
+.social-button {
+    background-color: #ffffff;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 25%;
+    font-size: 90%;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.facebook {
+    color: #3b5998;
+}
+
+.facebook:hover {
+    background-color: #2d4373;
+}
+
+.linkedin {
+    color: #0077b5;
+}
+
+.linkedin:hover {
+    background-color: #005f8c;
+}
+
+.gmail {
+    color: #db4437;
+}
+
+.gmail:hover {
+    background-color: #c1351d;
+}
+
+.whatsapp {
+    color: #25d366;
+}
+
+.whatsapp:hover {
+    background-color: #1ebe57;
+}
+
+.social-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    color: white;
+}

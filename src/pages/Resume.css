@@ -1,0 +1,195 @@
+/* Timeline container styling */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 80px;
+}
+
+/* Common styling for both sections */
+.timeline-section {
+    width: 48%;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    color: var(--app-primary-color);
+    margin-bottom: 30px;
+}
+
+/* Vertical line representing the timeline */
+.timeline-line {
+    content: "";
+    width: 5px;
+    background-color: #e1e1e1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+/* Styling for each timeline item */
+.timeline-item {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 50px;
+    transition: transform 0.3s ease;
+}
+
+.timeline-dot-line {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 50px;
+    height: 5px;
+    background-color: #e1e1e1;
+    transform: translateY(-50%);
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-extras {
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.timeline-extras-list {
+    display: flex;
+    gap: 30px;
+}
+
+.timeline-extras h5 {
+    font-size: 1.3vw;
+    margin: 5px 0;
+}
+
+.timeline-extra-list {
+    content: "";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 10px;
+}
+
+.timeline-extra {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-extra p {
+    margin-left: 3px;
+    font-size: 1.1vw;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-target {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip-target img {
+    width: 100%;
+    height: 100%;
+}
+
+.tooltip-content {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+}
+
+.tooltip-container:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Content of the timeline item */
+.timeline-content {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.timeline-content .title {
+    font-size: 1.5vw;
+    margin: 10px 0;
+}
+
+.timeline-content .sub-title {
+    font-size: 1.2vw;
+}
+
+.timeline-content .description {
+    font-size: 1.1vw;
+}
+
+.timeline-content .gpa {
+    content: "";
+    position: absolute;
+    padding: 10px;
+    margin: 15px;
+    top: 0;
+    right: 0;
+    background: var(--app-primary-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.1vw;
+    color: var(--app-secondary-color);
+}
+
+/* Hover effect on each item */
+.timeline-item:hover .timeline-item-hover {
+    background-color: #e1ecf7;
+}
+
+.timeline-item:hover .timeline-content {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-item:hover .timeline-extras {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* Add some space at the bottom of the last item */
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
