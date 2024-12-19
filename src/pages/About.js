@@ -87,7 +87,7 @@ const About = forwardRef((props, ref) => {
                 </div>
                 <div className="slider-section">
                     <h1>About Me</h1>
-                    <p className="description">I am Yakir Uzan, a motivated software developer and a Computer Science graduate from the Technion. I have 3.5 years of professional experience in software development and ~3 years of experience in software development through personal projects.</p>
+                    <p className="about-description">I am Yakir Uzan, a motivated software developer and a Computer Science graduate from the Technion. I have 3.5 years of professional experience in software development and ~3 years of experience in software development through personal projects.</p>
                     {sliderData.map((item, index) => (
                         <SeekBar key={index} ref={item.ref} name={item.name} value={item.value} />
                     ))}
