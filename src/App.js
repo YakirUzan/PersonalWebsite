@@ -10,10 +10,12 @@ function App() {
     const location = useLocation();
 
     // Section refs
+    const homeSectionRef = useRef(null);
     const homeRef = useRef(null);
+    const aboutSectionRef = useRef(null);
     const aboutRef = useRef(null);
-    const resumeRef = useRef(null);
-    const projectsRef = useRef(null);
+    const resumeSectionRef = useRef(null);
+    const projectsSectionRef = useRef(null);
 
     // State to track active section
     const [activeTab, setActiveTab] = useState('home');
@@ -27,16 +29,16 @@ function App() {
     useEffect(() => {
         switch (location.hash) {
             case '#home':
-                scrollToSection(homeRef);
+                scrollToSection(homeSectionRef);
                 break;
             case '#about':
-                scrollToSection(aboutRef);
+                scrollToSection(aboutSectionRef);
                 break;
             case '#resume':
-                scrollToSection(resumeRef);
+                scrollToSection(resumeSectionRef);
                 break;
             case '#projects':
-                scrollToSection(projectsRef);
+                scrollToSection(projectsSectionRef);
                 break;
             default:
                 break;
@@ -48,19 +50,27 @@ function App() {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
 
-            const homeTop = homeRef.current.offsetTop;
-            const aboutTop = aboutRef.current.offsetTop;
-            const resumeTop = resumeRef.current.offsetTop;
-            const projectsTop = projectsRef.current.offsetTop;
+            const projectsTop = projectsSectionRef.current.offsetTop;
+            const resumeTop = resumeSectionRef.current.offsetTop;
+            const aboutTop = aboutSectionRef.current.offsetTop;
 
             if (scrollPosition >= projectsTop - 50) {
-                setActiveTab('projects');
+                if (activeTab !== 'projects') {
+                    setActiveTab('projects');
+                }
             } else if (scrollPosition >= resumeTop - 50) {
-                setActiveTab('resume');
+                if (activeTab !== 'resume') {
+                    setActiveTab('resume');
+                }
             } else if (scrollPosition >= aboutTop - 50) {
-                setActiveTab('about');
+                if (activeTab !== 'about') {
+                    setActiveTab('about');
+                    aboutRef.current.onScroll();
+                }
             } else {
-                setActiveTab('home');
+                if (activeTab !== 'home') {
+                    setActiveTab('home');
+                }
             }
 
             const sections = document.querySelector('.sections');
@@ -71,7 +81,7 @@ function App() {
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [activeTab]);
 
     return (
         <div className="App">
@@ -79,28 +89,28 @@ function App() {
                 <Link
                     to="#home"
                     className={activeTab === 'home' ? 'active' : ''}
-                    onClick={() => scrollToSection(homeRef)}
+                    onClick={() => scrollToSection(homeSectionRef)}
                 >
                     Home
                 </Link>
                 <Link
                     to="#about"
                     className={activeTab === 'about' ? 'active' : ''}
-                    onClick={() => scrollToSection(aboutRef)}
+                    onClick={() => scrollToSection(aboutSectionRef)}
                 >
                     About
                 </Link>
                 <Link
                     to="#resume"
                     className={activeTab === 'resume' ? 'active' : ''}
-                    onClick={() => scrollToSection(resumeRef)}
+                    onClick={() => scrollToSection(resumeSectionRef)}
                 >
                     Resume
                 </Link>
                 <Link
                     to="#projects"
                     className={activeTab === 'projects' ? 'active' : ''}
-                    onClick={() => scrollToSection(projectsRef)}
+                    onClick={() => scrollToSection(projectsSectionRef)}
                 >
                     Projects
                 </Link>
@@ -110,19 +120,19 @@ function App() {
             </div>
 
             <div className="sections">
-                <div ref={homeRef} id="home" className="section">
-                    <Home/>
+                <div ref={homeSectionRef} id="home" className="section">
+                    <Home ref={homeRef}/>
                 </div>
 
-                <div ref={aboutRef} id="about" className="section">
-                    <About/>
+                <div ref={aboutSectionRef} id="about" className="section">
+                    <About ref={aboutRef}/>
                 </div>
 
-                <div ref={resumeRef} id="resume" className="section">
+                <div ref={resumeSectionRef} id="resume" className="section">
                     <Resume/>
                 </div>
 
-                <div ref={projectsRef} id="projects" className="section">
+                <div ref={projectsSectionRef} id="projects" className="section">
                     <Projects/>
                 </div>
             </div>

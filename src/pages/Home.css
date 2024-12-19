@@ -8,7 +8,6 @@
 
 .text-section {
     flex: 1;
-    padding-left: 10%;
     text-align: left;
 }
 
@@ -16,7 +15,7 @@
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centers the image inside the section */
+    align-items: center;
 }
 
 .image-div {

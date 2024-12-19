@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {forwardRef, useImperativeHandle} from 'react';
 import './Home.css';
 
-function Home() {
+const Home = forwardRef((props, ref) => {
     const openLink = (url) => {
         window.open(url, "_blank");
     };
+
+    useImperativeHandle(ref, () => ({
+        openLink,
+    }));
 
     return (
         <div className="home">
@@ -13,9 +17,7 @@ function Home() {
                     <div>
                         <h1 className="sour-gummy no-margin">Hi👋 I'm Yakir Uzan</h1>
                         <h1 className="sour-gummy no-margin app-color-text">Software Developer</h1>
-                        <p>A motivated software developer and Computer Science graduate from the Technion, with
-                            experience
-                            in software development.</p>
+                        <p>Fast learning, Hard working with great interpersonal skills.</p>
                         <h3>Where can you find me:</h3>
                         <div className="social-buttons">
                             <button
@@ -54,6 +56,6 @@ function Home() {
             </div>
         </div>
     )
-}
+});
 
 export default Home;
