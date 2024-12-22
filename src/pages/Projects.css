@@ -1,0 +1,160 @@
+
+.projects-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.project-viewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-container {
+    position: relative;
+    display: inline-block;
+}
+
+.project-split-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(249, 249, 249, 0.9);
+    padding: 20px;
+}
+
+.project-info-section {
+    flex: 1;
+    margin-left: 2vw;
+    height: 100%;
+}
+
+.project-info-section h1 {
+    font-size: 2vw;
+}
+
+.project-info-section h3 {
+    font-size: 1.7vw;
+}
+
+.project-info-section p {
+    font-size: 1.4vw;
+}
+
+.project-info-section a {
+    position: absolute;
+    bottom: 40px;
+    font-size: 1.1vw;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.project-info-section a:hover {
+    text-decoration: underline;
+    color: #2875a8;
+}
+
+.project-title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.project-title img {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-image-section {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image-section img {
+    height: 50vh;
+    width: auto;
+    max-width: 20vw;
+    max-height: fit-content;
+}
+
+.control-button {
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.control-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.control-button.left {
+    left: -20px; /* Adjust spacing from the image */
+}
+
+.control-button.right {
+    right: -20px; /* Adjust spacing from the image */
+}
+
+/* Basic styles for the slider */
+.projects .slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.projects .slider {
+    display: flex;
+    width: 100%;
+}
+
+.projects .slider-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.skills-container h5 {
+    margin-bottom: 5px;
+}
+
+.skill-list {
+    content: "";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 10px;
+}
+
+.project-image-section img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.project-image-section img:hover {
+    transform: scale(1.5);
+}
+
+

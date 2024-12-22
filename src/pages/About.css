@@ -15,10 +15,6 @@
     margin-left: 10%;
 }
 
-.about-description {
-    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-}
-
 .slider-container {
     margin: 20px auto;
     position: relative;

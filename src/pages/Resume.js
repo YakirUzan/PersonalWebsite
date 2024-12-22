@@ -1,59 +1,6 @@
 import React from 'react';
 import './Resume.css';
-
-const TimelineItemExtra = ({extra}) => {
-    let title = null;
-
-    let isIcon = ["java", "c", "cpp", "python", "angular", "typescript", "javascript", "html", "css", "mysql", "vxworks", "intellij", "pycharm", "visualstudio", "webstorm"].includes(extra);
-
-    if (extra === "java") {
-        title = "Java";
-    } else if (extra === "c") {
-        title = "C (Language)";
-    } else if (extra === "cpp") {
-        title = "C++";
-    } else if (extra === "python") {
-        title = "Python";
-    } else if (extra === "angular") {
-        title = "Angular";
-    } else if (extra === "typescript") {
-        title = "TypeScript";
-    } else if (extra === "javascript") {
-        title = "JavaScript";
-    } else if (extra === "html") {
-        title = "HTML";
-    } else if (extra === "css") {
-        title = "CSS";
-    } else if (extra === "mysql") {
-        title = "MySql";
-    } else if (extra === "vxworks") {
-        title = "VxWorks";
-    } else if (extra === "intellij") {
-        title = "IntelliJ";
-    } else if (extra === "pycharm") {
-        title = "PyCharm";
-    } else if (extra === "visualstudio") {
-        title = "Visual Studio";
-    } else if (extra === "webstorm") {
-        title = "WebStorm";
-    }
-
-    return (
-        <div className="timeline-extra">
-            {isIcon && (
-                <div className="tooltip-container">
-                    <div className="tooltip-target">
-                        <img src={`/${extra}.png`} alt={title}/>
-                    </div>
-                    <div className="tooltip-content">{title}</div>
-                </div>
-            )}
-            {!isIcon && (
-                <p className="no-margin">{extra}</p>
-            )}
-        </div>
-    )
-}
+import SkillComponent from "../components/SkillComponent";
 
 const TimelineItem = ({year, title, companyOrInstitution, description, gpa, courses, skills, ides}) => {
     return (
@@ -80,7 +27,7 @@ const TimelineItem = ({year, title, companyOrInstitution, description, gpa, cour
                                 <h5>Courses</h5>
                                 <div className="timeline-extra-list">
                                     {courses.map((extra, index) => (
-                                        <TimelineItemExtra key={index} extra={extra}/>
+                                        <SkillComponent key={index} extra={extra}/>
                                     ))}
                                 </div>
                             </div>
@@ -90,7 +37,7 @@ const TimelineItem = ({year, title, companyOrInstitution, description, gpa, cour
                                 <h5>Skills</h5>
                                 <div className="timeline-extra-list">
                                     {skills.map((extra, index) => (
-                                        <TimelineItemExtra key={index} extra={extra}/>
+                                        <SkillComponent key={index} extra={extra}/>
                                     ))}
                                 </div>
                             </div>
@@ -100,7 +47,7 @@ const TimelineItem = ({year, title, companyOrInstitution, description, gpa, cour
                                 <h5>IDEs</h5>
                                 <div className="timeline-extra-list">
                                     {ides.map((extra, index) => (
-                                        <TimelineItemExtra key={index} extra={extra}/>
+                                        <SkillComponent key={index} extra={extra}/>
                                     ))}
                                 </div>
                             </div>

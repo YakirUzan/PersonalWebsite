@@ -13,7 +13,7 @@
 
 .timeline-section h2 {
     text-align: center;
-    color: var(--app-primary-color);
+    color: white;
     margin-bottom: 30px;
 }
 
@@ -83,63 +83,10 @@
     gap: 10px;
 }
 
-.timeline-extra {
-    display: flex;
-    align-items: center;
-    background: #f9f9f9;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.timeline-extra p {
-    margin-left: 3px;
-    font-size: 1.1vw;
-}
-
-.tooltip-container {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip-target {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.tooltip-target img {
-    width: 100%;
-    height: 100%;
-}
-
-.tooltip-content {
-    position: absolute;
-    bottom: 150%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #000;
-    color: #fff;
-    padding: 8px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 10;
-}
-
-.tooltip-container:hover .tooltip-content {
-    visibility: visible;
-    opacity: 1;
-}
-
 /* Content of the timeline item */
 .timeline-content {
-    background: #f9f9f9;
+    /*background: #f9f9f9;*/
+    background-color: rgba(249, 249, 249, 0.9);
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);

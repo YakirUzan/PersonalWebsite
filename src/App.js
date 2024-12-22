@@ -16,9 +16,11 @@ function App() {
     const aboutRef = useRef(null);
     const resumeSectionRef = useRef(null);
     const projectsSectionRef = useRef(null);
+    const projectsRef = useRef(null);
 
     // State to track active section
     const [activeTab, setActiveTab] = useState('home');
+    const previousTabRef = useRef('home');
 
     // Scroll to a specific section
     const scrollToSection = (ref) => {
@@ -65,12 +67,23 @@ function App() {
             } else if (scrollPosition >= aboutTop - 50) {
                 if (activeTab !== 'about') {
                     setActiveTab('about');
-                    aboutRef.current.onScroll();
                 }
             } else {
                 if (activeTab !== 'home') {
                     setActiveTab('home');
                 }
+            }
+
+            if (activeTab !== previousTabRef.current) {
+                if (activeTab === 'about') {
+                    aboutRef.current.onScrollingIn();
+                } else if (activeTab === 'projects') {
+                    projectsRef.current.onScrollingIn();
+                }
+                if (previousTabRef.current === 'projects') {
+                    projectsRef.current.onScrollingOut();
+                }
+                previousTabRef.current = activeTab;
             }
 
             const sections = document.querySelector('.sections');
@@ -133,7 +146,7 @@ function App() {
                 </div>
 
                 <div ref={projectsSectionRef} id="projects" className="section">
-                    <Projects/>
+                    <Projects ref={projectsRef}/>
                 </div>
             </div>
         </div>
