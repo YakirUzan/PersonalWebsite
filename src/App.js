@@ -27,6 +27,10 @@ function App() {
         ref.current.scrollIntoView({behavior: 'smooth', block: 'start'});
     };
 
+    const openLink = (url) => {
+        window.open(url, "_blank");
+    };
+
     // Set active tab based on URL
     useEffect(() => {
         switch (location.hash) {
@@ -147,6 +151,39 @@ function App() {
 
                 <div ref={projectsSectionRef} id="projects" className="section">
                     <Projects ref={projectsRef}/>
+                </div>
+            </div>
+
+            <div className="bottom-container">
+                <p className="no-margin">© 2025 All rights reserved by Yakir Uzan</p>
+                <div className="bottom-social-buttons">
+                    <button
+                        className="bottom-social-button"
+                        onClick={() => openLink("https://www.facebook.com/yakir.uzan.9/")}
+                    >
+                        <i className="fa-brands fa-facebook-f"></i>
+                    </button>
+
+                    <button
+                        className="bottom-social-button"
+                        onClick={() => openLink("https://www.linkedin.com/in/yakir-uzan/")}
+                    >
+                        <i className="fa-brands fa-linkedin-in"></i>
+                    </button>
+
+                    <button
+                        className="bottom-social-button"
+                        onClick={() => openLink("mailto:uzan.yakir@gmail.com")}
+                    >
+                        <i className="fab fa-google"></i>
+                    </button>
+
+                    <button
+                        className="bottom-social-button"
+                        onClick={() => openLink("https://api.whatsapp.com/send?phone=+972544850933&text=Hi%20Yakir%20%F0%9F%98%8A")}
+                    >
+                        <i className="fa-brands fa-whatsapp"></i>
+                    </button>
                 </div>
             </div>
         </div>

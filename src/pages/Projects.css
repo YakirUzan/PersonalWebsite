@@ -5,6 +5,10 @@
     margin-bottom: 50px;
 }
 
+.project-title img {
+    background-color: white;
+}
+
 .project-viewer {
     display: flex;
     justify-content: center;

@@ -70,6 +70,38 @@ body {
   z-index: 5;
 }
 
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--app-primary-color);
+  padding: 20px;
+  color: var(--app-secondary-color);
+}
+
+.bottom-social-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.bottom-social-button {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--app-secondary-color);
+  border: none;
+  border-radius: 50%;
+  font-size: 90%;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.bottom-social-button:hover {
+  background-color: var(--app-secondary-color);
+  color: white;
+}
+
 #home {
   color: white;
   height: 100vh;
