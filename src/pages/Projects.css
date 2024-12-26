@@ -87,6 +87,10 @@
 
 .project-image-section img {
     width: 60%;
+    /*height: 50vh;*/
+    /*width: auto;*/
+    /*max-width: 20vw;*/
+    /*max-height: fit-content;*/
 }
 
 .control-button {
@@ -183,10 +187,10 @@
         height: 30px;
     }
 
-    .project-image-section img {
-        height: 75vh;
-        max-width: 40vw;
-    }
+    /*.project-image-section img {*/
+    /*    height: 75vh;*/
+    /*    max-width: 40vw;*/
+    /*}*/
 }
 
 
