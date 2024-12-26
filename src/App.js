@@ -101,6 +101,7 @@ function App() {
 
     return (
         <div className="App">
+            <div className="mobile-background"></div>
             <div className="tabs">
                 <Link
                     to="#home"

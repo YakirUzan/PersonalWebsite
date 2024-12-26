@@ -86,10 +86,7 @@
 }
 
 .project-image-section img {
-    height: 50vh;
-    width: auto;
-    max-width: 20vw;
-    max-height: fit-content;
+    width: 60%;
 }
 
 .control-button {

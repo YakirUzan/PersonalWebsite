@@ -53,6 +53,10 @@ body {
 }
 
 /* Sections styling */
+.mobile-background {
+  background: none;
+}
+
 .sections {
   background-image: url('/public/home_background.jpg');
   background-size: cover;
@@ -117,6 +121,22 @@ body {
 }
 
 @media (max-width: 768px) {
+  .mobile-background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    background-image: url('/public/home_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+  .sections {
+    background: none;
+  }
+
   .tabs {
     gap: 0;
   }
