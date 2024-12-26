@@ -11,7 +11,6 @@ function App() {
 
     // Section refs
     const homeSectionRef = useRef(null);
-    const homeRef = useRef(null);
     const aboutSectionRef = useRef(null);
     const aboutRef = useRef(null);
     const resumeSectionRef = useRef(null);
@@ -131,14 +130,11 @@ function App() {
                 >
                     Projects
                 </Link>
-                <button className="text-button" onClick={() => alert("Button clicked!")}>
-                    Contact
-                </button>
             </div>
 
             <div className="sections">
                 <div ref={homeSectionRef} id="home" className="section">
-                    <Home ref={homeRef}/>
+                    <Home/>
                 </div>
 
                 <div ref={aboutSectionRef} id="about" className="section">

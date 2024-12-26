@@ -3,16 +3,12 @@
     display: flex;
     align-items: center;
     position: relative;
-}
-
-.about-image-section {
-    margin-left: 15%;
+    justify-content: space-evenly;
 }
 
 .slider-section {
     width: 40%;
     color: white;
-    margin-left: 10%;
 }
 
 .slider-container {
@@ -24,7 +20,7 @@
     position: absolute;
     top: -10px;
     left: 0;
-    font-size: 1.3vw;
+    font-size: 0.8em;
     font-weight: bold;
 }
 
@@ -32,7 +28,7 @@
     position: absolute;
     top: -10px;
     right: 0;
-    font-size: 1.3vw;
+    font-size: 0.8em;
     font-weight: bold;
 }
 
@@ -62,5 +58,19 @@
     background: #fff;
     border: 2px solid var(--app-primary-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .about-split-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        height: 100vh;
+    }
+
+    .slider-section {
+        width: 90%;
+        align-self: center;
+    }
 }
 

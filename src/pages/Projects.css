@@ -39,23 +39,23 @@
 }
 
 .project-info-section h1 {
-    font-size: 2vw;
+    font-size: clamp(.8em, 2vw, 1em);
 }
 
 .project-info-section h3 {
-    font-size: 1.7vw;
+    font-size: clamp(.7em, 1.7vw, 1em);
 }
 
 .project-info-section p {
-    font-size: 1.4vw;
+    font-size: clamp(.6em, 1.4vw, 1em);
 }
 
 .project-info-section a {
     position: absolute;
-    bottom: 40px;
-    font-size: 1.1vw;
+    font-size: clamp(.5em, 1.1vw, 1em);
     color: #3498db;
     text-decoration: none;
+    margin-top: 20px;
 }
 
 .project-info-section a:hover {
@@ -72,8 +72,8 @@
 }
 
 .project-title img {
-    width: 3vw;
-    height: 3vw;
+    width: 50px;
+    height: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -141,6 +141,7 @@
 }
 
 .skills-container h5 {
+    font-size: clamp(.7em, 1.3vw, 1em);
     margin-bottom: 5px;
 }
 
@@ -159,6 +160,36 @@
 
 .project-image-section img:hover {
     transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+    .project-split-container {
+        flex-direction: column;
+        width: 60vw;
+        height: 70vh;
+    }
+
+    .project-info-section {
+        margin-left: 0;
+    }
+
+    .skill-list {
+        gap: 5px;
+    }
+
+    .projects-title {
+        margin-bottom: 20px;
+    }
+
+    .project-title img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .project-image-section img {
+        height: 75vh;
+        max-width: 40vw;
+    }
 }
 
 

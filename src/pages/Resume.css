@@ -17,6 +17,10 @@
     margin-bottom: 30px;
 }
 
+.timeline-item-list {
+    position: relative;
+}
+
 /* Vertical line representing the timeline */
 .timeline-line {
     content: "";
@@ -71,7 +75,7 @@
 }
 
 .timeline-extras h5 {
-    font-size: 1.3vw;
+    font-size: clamp(.7em, 1.3vw, 1em);
     margin: 5px 0;
 }
 
@@ -94,16 +98,16 @@
 }
 
 .timeline-content .title {
-    font-size: 1.5vw;
+    font-size: clamp(.8em, 1.5vw, 1em);
     margin: 10px 0;
 }
 
 .timeline-content .sub-title {
-    font-size: 1.2vw;
+    font-size: clamp(.7em, 1.2vw, 1em);
 }
 
 .timeline-content .description {
-    font-size: 1.1vw;
+    font-size: clamp(.6em, 1.1vw, 1em);
 }
 
 .timeline-content .gpa {
@@ -116,7 +120,7 @@
     background: var(--app-primary-color);
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 1.1vw;
+    font-size: clamp(.5em, 1.1vw, 1em);
     color: var(--app-secondary-color);
 }
 
@@ -138,4 +142,45 @@
 /* Add some space at the bottom of the last item */
 .timeline-item:last-child {
     margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        margin: 0 20px;
+    }
+
+    .timeline-section {
+        width: auto;
+    }
+
+    .timeline-section h2 {
+        margin-bottom: 10px;
+    }
+
+    .timeline-item {
+        padding-left: 25px;
+    }
+
+    .timeline-dot-line {
+        width: 25px;
+    }
+
+    .timeline-content {
+        padding: 10px;
+    }
+
+    .timeline-content .gpa {
+        padding: 5px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+    .timeline-extras-list {
+        gap: 10px;
+    }
+
+    .timeline-extra-list {
+        gap: 5px;
+    }
 }

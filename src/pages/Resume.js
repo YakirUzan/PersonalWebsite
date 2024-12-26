@@ -102,23 +102,21 @@ const Timeline = () => {
             <div className="timeline">
                 <div className="timeline-section">
                     <h2>Education</h2>
+                    <div className="timeline-item-list">
+                        <div className="timeline-line"></div>
+                        {educationData.map((item, index) => (
+                            <TimelineItem key={index} {...item} />
+                        ))}
+                    </div>
                 </div>
                 <div className="timeline-section">
                     <h2>Experience</h2>
-                </div>
-            </div>
-            <div className="timeline">
-                <div className="timeline-section">
-                    <div className="timeline-line"></div>
-                    {educationData.map((item, index) => (
-                        <TimelineItem key={index} {...item} />
-                    ))}
-                </div>
-                <div className="timeline-section">
-                    <div className="timeline-line"></div>
-                    {experienceData.map((item, index) => (
-                        <TimelineItem key={index} {...item} />
-                    ))}
+                    <div className="timeline-item-list">
+                        <div className="timeline-line"></div>
+                        {experienceData.map((item, index) => (
+                            <TimelineItem key={index} {...item} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

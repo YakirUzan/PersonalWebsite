@@ -82,7 +82,7 @@ const About = forwardRef((props, ref) => {
     return (
         <div className="about">
             <div className="about-split-container">
-                <div className="about-image-section">
+                <div>
                     <div className="image-div" style={{backgroundImage: "url('/yakir_uzan.jpg')"}}></div>
                 </div>
                 <div className="slider-section">
