@@ -107,6 +107,7 @@
 
     .text-section {
         text-align: center;
+        padding: 0 10px;
     }
 
     .image-div {

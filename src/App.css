@@ -54,7 +54,7 @@ body {
 
 /* Sections styling */
 .mobile-background {
-  background: none;
+  background-image: none;
 }
 
 .sections {
@@ -134,7 +134,7 @@ body {
   }
 
   .sections {
-    background: none;
+    background-image: none;
   }
 
   .tabs {
