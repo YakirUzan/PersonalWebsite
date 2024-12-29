@@ -21,7 +21,7 @@
 .image-div {
     width: 50vh;
     aspect-ratio: 1 / 1;
-    background-image: url('/public/yakir_uzan.jpg'); /* Path to your image */
+    background-image: url('/public/yakir_uzan_1.jpg'); /* Path to your image */
     background-size: cover; /* Ensures the image covers the entire div */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling */

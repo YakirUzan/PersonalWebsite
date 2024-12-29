@@ -85,5 +85,6 @@ export const data = {
         linkedin: "https://www.linkedin.com/in/yakir-uzan/",
         gmail: "mailto:uzan.yakir@gmail.com",
         whatsapp: "https://api.whatsapp.com/send?phone=972544850933",
-    }
+    },
+    copyrights: "© 2025 All rights reserved by Yakir Uzan"
 };

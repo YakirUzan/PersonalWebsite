@@ -5,8 +5,7 @@ import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-import {openLink} from "./utils/utils";
-import {data} from "./data";
+import AppBottomComponent from "./components/AppBottomComponent";
 import { useMediaQuery } from 'react-responsive';
 
 function App() {
@@ -154,38 +153,7 @@ function App() {
                 </div>
             </div>
 
-            <div className="bottom-container">
-                <p className="no-margin">© 2025 All rights reserved by Yakir Uzan</p>
-                <div className="bottom-social-buttons">
-                    <button
-                        className="bottom-social-button"
-                        onClick={() => openLink(data.social.facebook)}
-                    >
-                        <i className="fa-brands fa-facebook-f"></i>
-                    </button>
-
-                    <button
-                        className="bottom-social-button"
-                        onClick={() => openLink(data.social.linkedin)}
-                    >
-                        <i className="fa-brands fa-linkedin-in"></i>
-                    </button>
-
-                    <button
-                        className="bottom-social-button"
-                        onClick={() => openLink(data.social.gmail)}
-                    >
-                        <i className="fab fa-google"></i>
-                    </button>
-
-                    <button
-                        className="bottom-social-button"
-                        onClick={() => openLink(data.social.whatsapp)}
-                    >
-                        <i className="fa-brands fa-whatsapp"></i>
-                    </button>
-                </div>
-            </div>
+            <AppBottomComponent />
         </div>
     );
 }

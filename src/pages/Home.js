@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import {openLink} from "../utils/utils";
+import {openLink} from "../utils";
 import {data} from "../data";
 
 function Home() {
