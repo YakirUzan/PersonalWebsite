@@ -1,17 +1,17 @@
 
-.split-container {
+.home .split-container {
     display: flex; /* Enables Flexbox */
     justify-content: space-between; /* Distributes space between the two sections */
     align-items: center; /* Centers the content vertically */
     height: 100vh; /* Full viewport height (optional) */
 }
 
-.text-section {
+.home .text-section {
     flex: 1;
     text-align: left;
 }
 
-.image-section {
+.home .image-section {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -29,7 +29,7 @@
     border: 6px solid var(--app-primary-color);
 }
 
-.sour-gummy {
+.home .sour-gummy {
     font-family: "Sour Gummy", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -37,16 +37,16 @@
     font-variation-settings: "wdth" 100;
 }
 
-.app-color-text {
+.home .app-color-text {
     color: var(--app-primary-color);
 }
 
-.social-buttons {
+.home .social-buttons {
     display: flex;
     gap: 30px;
 }
 
-.social-button {
+.home .social-button {
     background-color: #ffffff;
     color: white;
     padding: 20px;
@@ -59,45 +59,45 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-.facebook {
+.home .facebook {
     color: #3b5998;
 }
 
-.facebook:hover {
+.home .facebook:hover {
     background-color: #2d4373;
 }
 
-.linkedin {
+.home .linkedin {
     color: #0077b5;
 }
 
-.linkedin:hover {
+.home .linkedin:hover {
     background-color: #005f8c;
 }
 
-.gmail {
+.home .gmail {
     color: #db4437;
 }
 
-.gmail:hover {
+.home .gmail:hover {
     background-color: #c1351d;
 }
 
-.whatsapp {
+.home .whatsapp {
     color: #25d366;
 }
 
-.whatsapp:hover {
+.home .whatsapp:hover {
     background-color: #1ebe57;
 }
 
-.social-button:hover {
+.home .social-button:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
     color: white;
 }
 
 @media (max-width: 768px) {
-    .split-container {
+    .home .split-container {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: stretch;
@@ -105,7 +105,7 @@
         gap: 40px;
     }
 
-    .text-section {
+    .home .text-section {
         text-align: center;
         padding: 0 10px;
     }
@@ -115,12 +115,12 @@
         justify-self: center;
     }
 
-    .social-buttons {
+    .home .social-buttons {
         gap: 10px;
         justify-content: center;
     }
 
-    .social-button {
+    .home .social-button {
         padding: 15px;
         font-size: 20px;
     }

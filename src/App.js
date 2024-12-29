@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import {openLink} from "./utils/utils";
+import {data} from "./data";
 
 function App() {
     const location = useLocation();
@@ -24,10 +26,6 @@ function App() {
     // Scroll to a specific section
     const scrollToSection = (ref) => {
         ref.current.scrollIntoView({behavior: 'smooth', block: 'start'});
-    };
-
-    const openLink = (url) => {
-        window.open(url, "_blank");
     };
 
     // Set active tab based on URL
@@ -156,28 +154,28 @@ function App() {
                 <div className="bottom-social-buttons">
                     <button
                         className="bottom-social-button"
-                        onClick={() => openLink("https://www.facebook.com/yakir.uzan.9/")}
+                        onClick={() => openLink(data.social.facebook)}
                     >
                         <i className="fa-brands fa-facebook-f"></i>
                     </button>
 
                     <button
                         className="bottom-social-button"
-                        onClick={() => openLink("https://www.linkedin.com/in/yakir-uzan/")}
+                        onClick={() => openLink(data.social.linkedin)}
                     >
                         <i className="fa-brands fa-linkedin-in"></i>
                     </button>
 
                     <button
                         className="bottom-social-button"
-                        onClick={() => openLink("mailto:uzan.yakir@gmail.com")}
+                        onClick={() => openLink(data.social.gmail)}
                     >
                         <i className="fab fa-google"></i>
                     </button>
 
                     <button
                         className="bottom-social-button"
-                        onClick={() => openLink("https://api.whatsapp.com/send?phone=+972544850933&text=Hi%20Yakir%20%F0%9F%98%8A")}
+                        onClick={() => openLink(data.social.whatsapp)}
                     >
                         <i className="fa-brands fa-whatsapp"></i>
                     </button>

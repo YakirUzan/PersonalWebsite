@@ -11,55 +11,6 @@
     color: white;
 }
 
-.slider-container {
-    margin: 20px auto;
-    position: relative;
-}
-
-.slider-name {
-    position: absolute;
-    top: -10px;
-    left: 0;
-    font-size: 0.8em;
-    font-weight: bold;
-}
-
-.slider-value {
-    position: absolute;
-    top: -10px;
-    right: 0;
-    font-size: 0.8em;
-    font-weight: bold;
-}
-
-.slider {
-    width: 100%;
-    appearance: none;
-    height: 8px;
-    border-radius: 5px;
-    outline: none;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #fff;
-    border: 2px solid var(--app-primary-color);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.slider::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #fff;
-    border: 2px solid var(--app-primary-color);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
 @media (max-width: 768px) {
     .about-split-container {
         flex-direction: column;

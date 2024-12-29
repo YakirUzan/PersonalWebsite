@@ -1,0 +1,17 @@
+
+.image-runner {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-runner img {
+    width: 60%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.image-runner img:hover {
+    transform: scale(1.3);
+}
