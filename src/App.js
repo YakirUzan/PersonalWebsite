@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import {openLink} from "./utils/utils";
 import {data} from "./data";
+import { useMediaQuery } from 'react-responsive';
 
 function App() {
     const location = useLocation();
@@ -22,6 +23,8 @@ function App() {
     // State to track active section
     const [activeTab, setActiveTab] = useState('home');
     const previousTabRef = useRef('home');
+
+    const isMobile = useMediaQuery({ maxWidth: 768 });
 
     // Scroll to a specific section
     const scrollToSection = (ref) => {
@@ -87,19 +90,21 @@ function App() {
                 previousTabRef.current = activeTab;
             }
 
-            const sections = document.querySelector('.sections');
-            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-            const stretch = 40 + (scrollPosition / maxScroll) * 40;
-            sections.style.backgroundPosition = `center ${stretch}%`;
+            if (!isMobile) {
+                const sections = document.querySelector('.app-background');
+                const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+                const stretch = 40 + (scrollPosition / maxScroll) * 40;
+                sections.style.backgroundPosition = `center ${stretch}%`;
+            }
         };
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [activeTab]);
+    }, [activeTab, isMobile]);
 
     return (
         <div className="App">
-            <div className="mobile-background"></div>
+            <div className="app-background"></div>
             <div className="tabs">
                 <Link
                     to="#home"
