@@ -91,6 +91,14 @@
     background-color: #1ebe57;
 }
 
+.home .github {
+    color: #000000;
+}
+
+.home .github:hover {
+    background-color: #000000;
+}
+
 .home .social-button:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
     color: white;

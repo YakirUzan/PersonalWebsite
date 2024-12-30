@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
-import {openLink} from "../utils";
 import {data} from "../data";
+import SocialComponent from "../components/SocialComponent";
 
 function Home() {
     return (
@@ -14,33 +14,16 @@ function Home() {
                         <p>{data.home.description}</p>
                         <h3>{data.home.social_title}</h3>
                         <div className="social-buttons">
-                            <button
-                                className="social-button facebook"
-                                onClick={() => openLink(data.social.facebook)}
-                            >
-                                <i className="fa-brands fa-facebook"></i>
-                            </button>
-
-                            <button
-                                className="social-button linkedin"
-                                onClick={() => openLink(data.social.linkedin)}
-                            >
-                                <i className="fab fa-linkedin"></i>
-                            </button>
-
-                            <button
-                                className="social-button gmail"
-                                onClick={() => openLink(data.social.gmail)}
-                            >
-                                <i className="fab fa-google"></i>
-                            </button>
-
-                            <button
-                                className="social-button whatsapp"
-                                onClick={() => openLink(data.social.whatsapp)}
-                            >
-                                <i className="fa-brands fa-whatsapp"></i>
-                            </button>
+                            <SocialComponent className="social-button linkedin" url={data.social.linkedin}
+                                             icon="fab fa-linkedin"/>
+                            <SocialComponent className="social-button facebook" url={data.social.facebook}
+                                             icon="fa-brands fa-facebook"/>
+                            <SocialComponent className="social-button github" url={data.social.github}
+                                             icon="fa-brands fa-github"/>
+                            <SocialComponent className="social-button gmail" url={data.social.gmail}
+                                             icon="fab fa-google"/>
+                            <SocialComponent className="social-button whatsapp" url={data.social.whatsapp}
+                                             icon="fa-brands fa-whatsapp"/>
                         </div>
                     </div>
                 </div>

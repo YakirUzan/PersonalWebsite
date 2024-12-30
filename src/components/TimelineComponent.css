@@ -1,0 +1,36 @@
+
+/* Common styling for both sections */
+.timeline-section {
+    width: 48%;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.timeline-item-list {
+    position: relative;
+}
+
+/* Vertical line representing the timeline */
+.timeline-line {
+    content: "";
+    width: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .timeline-section {
+        width: auto;
+    }
+
+    .timeline-section h2 {
+        margin-bottom: 10px;
+    }
+}

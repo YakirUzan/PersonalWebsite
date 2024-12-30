@@ -41,6 +41,10 @@
         font-size: .6em;
     }
 
+    .bottom-social-buttons {
+        gap: 5px;
+    }
+
     .bottom-social-button {
         width: 20px;
         height: 20px;

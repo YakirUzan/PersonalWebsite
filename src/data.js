@@ -2,7 +2,7 @@
 export const data = {
     home: {
         title: "Hi👋 I'm Yakir Uzan",
-        subtitle: "Software Developer",
+        subtitle: "Software Engineer",
         description: "Fast learning, Hard working with great interpersonal skills.",
         social_title: "Where can you find me:"
     },
@@ -85,6 +85,7 @@ export const data = {
         linkedin: "https://www.linkedin.com/in/yakir-uzan/",
         gmail: "mailto:uzan.yakir@gmail.com",
         whatsapp: "https://api.whatsapp.com/send?phone=972544850933",
+        github: "https://github.com/YakirUzan",
     },
     copyrights: "© 2025 All rights reserved by Yakir Uzan"
 };
