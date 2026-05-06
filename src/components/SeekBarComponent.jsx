@@ -46,7 +46,7 @@ const SeekBarComponent = forwardRef(function SeekBarComponent({ name, value }, r
           className="relative h-2 rounded-full bg-[#ffbd3f] transition-[width] duration-100"
           style={{ width: `${sliderValue}%` }}
         >
-          <span className="absolute top-1/2 right-0 h-[15px] w-[15px] translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#ffbd3f] bg-white shadow" />
+          <span className="absolute top-1/2 right-0 h-3.75 w-3.75 translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-[#ffbd3f] bg-white shadow" />
         </div>
       </div>
     </div>

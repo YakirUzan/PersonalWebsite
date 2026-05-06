@@ -30,7 +30,7 @@ const ImageRunnerComponent = forwardRef(function ImageRunnerComponent({ images }
         onClick={() => setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
-        className="w-[60%] cursor-pointer transition-transform duration-300 hover:scale-[1.3]"
+        className="w-3/5 cursor-pointer transition-transform duration-300 hover:scale-130"
       />
     </div>
   );

@@ -48,11 +48,11 @@ function Projects() {
         <div className="pt-14 md:pt-0">
           <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
             <div>
-              <div className="flex items-center justify-start gap-[10px]">
+              <div className="flex items-center justify-start gap-2.5">
                 <img
                   src={project.icon}
                   alt={project.name}
-                  className="h-[52px] w-[52px] rounded-[14px] bg-white shadow-[0_4px_6px_rgba(0,0,0,0.1)]"
+                  className="h-13 w-13 rounded-[14px] bg-white shadow-[0_4px_6px_rgba(0,0,0,0.1)]"
                 />
                 <div>
                   <h3 className="m-0 text-2xl text-[#fff7ea]">{project.name}</h3>

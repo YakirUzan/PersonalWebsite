@@ -68,8 +68,8 @@ function App() {
         style={{ backgroundImage: "url('/app_background.jpg')" }}
       />
 
-      <div className="mx-auto flex min-h-screen max-w-[1600px] flex-col gap-6 px-4 py-6 md:flex-row md:gap-0 md:px-6">
-        <aside className="md:sticky md:top-6 md:h-fit md:w-[38%] md:self-start md:pr-6 lg:w-[34%]">
+      <div className="mx-auto flex min-h-screen max-w-400 flex-col gap-6 px-4 py-6 md:flex-row md:gap-0 md:px-6">
+        <aside className="md:sticky md:top-6 md:h-fit md:w-19/50 md:self-start md:pr-6 lg:w-17/50">
           <Home
             activeSection={activeSection}
             onNavigate={scrollToSection}
@@ -77,7 +77,7 @@ function App() {
           />
         </aside>
 
-        <main className="md:w-[62%] md:px-2 lg:w-[66%]">
+        <main className="md:w-31/50 md:px-2 lg:w-33/50">
           <div className="space-y-10 md:space-y-14">
             <section
               ref={(node) => {
