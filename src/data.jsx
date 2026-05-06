@@ -43,6 +43,15 @@ export const data = {
     ],
     experienceData: [
       {
+        year: "07/2025 - Present",
+        title: "Embedded & Full Stack Developer",
+        companyOrInstitution: "Enervibe, Airport City",
+        description:
+          "Development of embedded software for an IoT tire sensor system with BLE communication to a central unit, enabling vehicle weight estimation and cloud connectivity. Designed and built a full Device & Fleet Management platform from scratch, including real-time monitoring, OTA updates, and mobile-first installation and provisioning tools.",
+        skills: ["cpp", "python", "javascript", "react", "aws"],
+        ides: ["vscode", "codex"],
+      },
+      {
         year: "07/2022 - 02/2024",
         title: "RT Embedded Software Developer",
         companyOrInstitution: "Elbit Systems, Avionics",
