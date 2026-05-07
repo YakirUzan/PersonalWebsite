@@ -4,7 +4,6 @@ import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
 import Resume from "./pages/Resume.jsx";
 import ColorBends from "./components/ColorBends.jsx";
-import ColorBends from "./components/ColorBends.jsx";
 import { data } from "./data.jsx";
 
 const sections = [
