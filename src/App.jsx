@@ -3,6 +3,7 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
 import Resume from "./pages/Resume.jsx";
+import ColorBends from "./components/ColorBends.jsx";
 import { data } from "./data.jsx";
 
 const sections = [
@@ -44,7 +45,9 @@ function App() {
 
       sections.forEach((section) => {
         const node = sectionRefs[section.key]?.current;
-        const top = node ? node.getBoundingClientRect().top + window.scrollY : 0;
+        const top = node
+          ? node.getBoundingClientRect().top + window.scrollY
+          : 0;
 
         if (node && offset >= top) {
           nextActiveSection = section.key;
@@ -62,13 +65,25 @@ function App() {
   }, [sectionRefs]);
 
   return (
-    <div className="min-h-screen bg-[#333333] text-white">
-      <div
-        className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat opacity-30"
-        style={{ backgroundImage: "url('/app_background.jpg')" }}
-      />
+    <div className="relative min-h-screen overflow-hidden bg-black text-white">
+      <div className="pointer-events-none fixed inset-0 z-0">
+        <ColorBends
+          rotation={90}
+          speed={0.5}
+          colors={["#f7cc55"]}
+          transparent={false}
+          autoRotate={0}
+          scale={1.2}
+          frequency={1}
+          warpStrength={1}
+          mouseInfluence={1.5}
+          parallax={0.75}
+          noise={0}
+        />
+      </div>
+      <div className="pointer-events-none fixed inset-0 z-0 bg-black/45" />
 
-      <div className="mx-auto flex min-h-screen max-w-400 flex-col gap-6 px-4 py-6 md:flex-row md:gap-0 md:px-6">
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-400 flex-col gap-6 px-4 py-6 md:flex-row md:gap-0 md:px-6">
         <aside className="md:sticky md:top-6 md:h-fit md:w-19/50 md:self-start md:pr-6 lg:w-17/50">
           <Home
             activeSection={activeSection}
