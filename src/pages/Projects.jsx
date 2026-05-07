@@ -21,10 +21,10 @@ function Projects() {
   return (
     <div className="w-full">
       <div className="mb-8">
-        <p className="mb-2 text-sm font-semibold uppercase tracking-[0.24em] text-[#ffcf72]">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-[0.24em] text-[#93c5fd]">
           Work
         </p>
-        <h2 className="m-0 text-3xl text-[#fff7ea]">Projects</h2>
+        <h2 className="m-0 text-3xl text-[#eff6ff]">Projects</h2>
       </div>
 
       <div className="relative">
@@ -55,18 +55,18 @@ function Projects() {
                   className="h-13 w-13 rounded-[14px] bg-white shadow-[0_4px_6px_rgba(0,0,0,0.1)]"
                 />
                 <div>
-                  <h3 className="m-0 text-2xl text-[#fff7ea]">{project.name}</h3>
-                  <p className="mt-1 mb-0 text-sm font-semibold uppercase tracking-[0.16em] text-[#ffcf72]">
+                  <h3 className="m-0 text-2xl text-[#eff6ff]">{project.name}</h3>
+                  <p className="mt-1 mb-0 text-sm font-semibold uppercase tracking-[0.16em] text-[#93c5fd]">
                     {project.location}
                   </p>
                 </div>
               </div>
 
-              <p className="mt-5 mb-0 leading-7 text-[#f1e7d6]">{project.description}</p>
+              <p className="mt-5 mb-0 leading-7 text-[#dbeafe]">{project.description}</p>
               <hr className="border-white/12" />
 
               <div>
-                <p className="mb-3 text-sm font-semibold text-[#fff7ea]">Skills</p>
+                <p className="mb-3 text-sm font-semibold text-[#eff6ff]">Skills</p>
                 <div className="flex flex-wrap justify-start gap-2">
                   {project.skills.map((extra) => (
                     <SkillComponent key={`${project.name}-${extra}`} extra={extra} />

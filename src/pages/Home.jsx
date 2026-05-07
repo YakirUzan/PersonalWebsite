@@ -44,7 +44,7 @@ function Home({ activeSection, onNavigate, sections }) {
       <div className="flex flex-col items-start gap-5 text-left">
         <div className="flex items-center gap-4 md:gap-5">
           <div
-            className="aspect-square w-20 shrink-0 rounded-full border-4 border-[#ffbd3f] bg-cover bg-center bg-no-repeat shadow-[0_12px_28px_rgba(0,0,0,0.3)] md:w-24"
+            className="aspect-square w-20 shrink-0 rounded-full border-4 border-[#3b82f6] bg-cover bg-center bg-no-repeat shadow-[0_12px_28px_rgba(0,0,0,0.3)] md:w-24"
             style={{ backgroundImage: "url('/yakir_uzan_1.jpg')" }}
           />
 
@@ -59,7 +59,7 @@ function Home({ activeSection, onNavigate, sections }) {
               {data.home.title}
             </h1>
             <h2
-              className="m-0 mt-2 text-xl font-medium text-[#ffbd3f] md:text-2xl"
+              className="m-0 mt-2 text-xl font-medium text-[#3b82f6] md:text-2xl"
               style={{
                 fontFamily: '"Sour Gummy", sans-serif',
                 fontVariationSettings: '"wdth" 100',
@@ -82,8 +82,8 @@ function Home({ activeSection, onNavigate, sections }) {
               onClick={() => onNavigate(section.key)}
               className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm transition-all md:text-base ${
                 activeSection === section.key
-                  ? "bg-white/10 text-[#ffbd3f]"
-                  : "text-white/80 hover:bg-white/5 hover:text-[#ffbd3f]"
+                  ? "bg-white/10 text-[#3b82f6]"
+                  : "text-white/80 hover:bg-white/5 hover:text-[#3b82f6]"
               }`}
             >
               <span>{section.label}</span>

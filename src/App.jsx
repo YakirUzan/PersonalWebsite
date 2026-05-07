@@ -70,7 +70,7 @@ function App() {
         <ColorBends
           rotation={90}
           speed={0.5}
-          colors={["#f7cc55"]}
+          colors={["#2f80ed"]}
           transparent={false}
           autoRotate={0}
           scale={1.2}
@@ -98,7 +98,7 @@ function App() {
               ref={(node) => {
                 sectionRefs.about.current = node;
               }}
-              className="border-b border-white/12 pb-10 text-[#f6f1e8]"
+              className="border-b border-white/12 pb-10 text-[#eaf2ff]"
             >
               <About />
             </section>
@@ -107,7 +107,7 @@ function App() {
               ref={(node) => {
                 sectionRefs.experience.current = node;
               }}
-              className="border-b border-white/12 pb-10 text-[#f6f1e8]"
+              className="border-b border-white/12 pb-10 text-[#eaf2ff]"
             >
               <Resume title="Experience" items={data.resume.experienceData} />
             </section>
@@ -116,7 +116,7 @@ function App() {
               ref={(node) => {
                 sectionRefs.education.current = node;
               }}
-              className="border-b border-white/12 pb-10 text-[#f6f1e8]"
+              className="border-b border-white/12 pb-10 text-[#eaf2ff]"
             >
               <Resume title="Education" items={data.resume.educationData} />
             </section>
@@ -125,7 +125,7 @@ function App() {
               ref={(node) => {
                 sectionRefs.projects.current = node;
               }}
-              className="pb-6 text-[#f6f1e8]"
+              className="pb-6 text-[#eaf2ff]"
             >
               <Projects />
             </section>

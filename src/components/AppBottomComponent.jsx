@@ -2,11 +2,11 @@ import SocialComponent from "./SocialComponent.jsx";
 import { data } from "../data.jsx";
 
 const bottomButtonClasses =
-  "flex h-5 w-5 items-center justify-center rounded-full bg-white/80 text-[70%] text-[#333333] shadow-md transition-colors hover:bg-[#333333] hover:text-white md:h-7 md:w-7 md:text-[90%]";
+  "flex h-5 w-5 items-center justify-center rounded-full bg-white/90 text-[70%] text-[#1d4ed8] shadow-md transition-colors hover:bg-[#1d4ed8] hover:text-white md:h-7 md:w-7 md:text-[90%]";
 
 function AppBottomComponent() {
   return (
-    <footer className="flex items-center justify-between bg-[#ffbd3f] px-3 py-2 text-[#333333] md:px-5 md:py-4">
+    <footer className="flex items-center justify-between bg-[#3b82f6] px-3 py-2 text-white md:px-5 md:py-4">
       <p className="m-0 text-[0.6em] md:text-base">{data.copyrights}</p>
 
       <div className="flex gap-1 md:gap-2.5">

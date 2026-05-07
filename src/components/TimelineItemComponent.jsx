@@ -12,8 +12,8 @@ function TimelineItemComponent({
 }) {
   return (
     <article className="group relative mb-7.5 flex pl-6.25 transition-transform md:pl-12.5">
-      <div className="absolute top-12.5 left-0 h-1.25 w-6.25 -translate-y-1/2 bg-white transition-colors group-hover:bg-[#ffefd4] md:w-12.5" />
-      <div className="absolute top-12.5 left-0 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white transition-colors group-hover:bg-[#ffefd4]" />
+      <div className="absolute top-12.5 left-0 h-1.25 w-6.25 -translate-y-1/2 bg-white transition-colors group-hover:bg-[#dbeafe] md:w-12.5" />
+      <div className="absolute top-12.5 left-0 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white transition-colors group-hover:bg-[#dbeafe]" />
 
       <div className="relative w-full rounded-[5px] bg-[rgba(249,249,249,0.9)] p-3 text-[#333333] shadow-[0_6px_12px_rgba(0,0,0,0.2)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_8px_16px_rgba(0,0,0,0.4)] md:p-7.5">
         <h4 className="my-2.5 text-[clamp(.8em,1.5vw,1em)]">{title}</h4>
@@ -24,7 +24,7 @@ function TimelineItemComponent({
         <p className="m-0 text-[clamp(.6em,1.1vw,1em)]">{description}</p>
 
         {gpa ? (
-          <div className="absolute top-0 right-0 m-2.5 rounded-[5px] bg-[#ffbd3f] px-1.25 py-1.25 text-[clamp(.5em,1.1vw,1em)] text-[#333333] shadow md:m-3.75 md:rounded-[10px] md:px-2.5 md:py-2.5">
+          <div className="absolute top-0 right-0 m-2.5 rounded-[5px] bg-[#3b82f6] px-1.25 py-1.25 text-[clamp(.5em,1.1vw,1em)] text-white shadow md:m-3.75 md:rounded-[10px] md:px-2.5 md:py-2.5">
             <p className="m-0">GPA: {gpa}</p>
           </div>
         ) : null}
