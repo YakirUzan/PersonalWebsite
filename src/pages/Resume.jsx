@@ -17,14 +17,14 @@ function Resume({ title, items }) {
             className="border-b border-white/12 pb-5 last:border-b-0"
           >
             <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-              <div>
+              <div className="min-w-0">
                 <h3 className="m-0 text-xl text-[#eff6ff]">{item.title}</h3>
                 <p className="mt-2 mb-0 text-sm font-semibold uppercase tracking-[0.16em] text-[#93c5fd]">
                   {item.companyOrInstitution}
                 </p>
               </div>
 
-              <span className="inline-flex rounded-full bg-[#3b82f6]/85 px-4 py-2 text-sm font-semibold text-white">
+              <span className="inline-flex w-fit max-w-full shrink-0 rounded-full bg-[#3b82f6]/85 px-4 py-2 text-sm font-semibold text-white md:ml-auto">
                 {item.year}
               </span>
             </div>

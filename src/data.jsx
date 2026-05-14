@@ -8,7 +8,7 @@ export const data = {
   },
   about: {
     description:
-      "I'm a developer who enjoys building things end-to-end, from low-level embedded systems to full cloud-based platforms. I've worked on real-time systems, IoT solutions, and web applications, and I like tackling complex problems that require both technical depth and creativity. With experience across different industries, I bring a practical, hands-on approach and enjoy taking ownership of projects from idea to production.\n\nIn my free time, you can usually find me at the beach, playing ping pong, working out, listening to music, or spending time with friends and family.",
+      "I'm a developer who enjoys building things end-to-end, from low-level embedded systems to full cloud-based platforms. I've worked on real-time systems, IoT solutions, and web applications, and I like tackling complex problems that require both technical depth and creativity. With experience across different industries, I bring a practical, hands-on approach and enjoy taking ownership of projects from idea to production.",
     sliderData: [
       { name: "Java", value: 98 },
       { name: "Android Development", value: 95 },
