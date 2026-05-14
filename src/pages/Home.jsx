@@ -1,40 +1,41 @@
+import Dock from "../components/Dock.jsx";
 import { data } from "../data.jsx";
 
 const socialButtons = [
   {
     key: "linkedin",
     url: data.social.linkedin,
-    icon: "fab fa-linkedin",
+    icon: <i className="fab fa-linkedin" />,
     label: "LinkedIn",
-    color: "text-[#0077b5] hover:bg-[#005f8c]",
+    color: "#0077b5",
   },
   {
     key: "facebook",
     url: data.social.facebook,
-    icon: "fa-brands fa-facebook",
+    icon: <i className="fa-brands fa-facebook" />,
     label: "Facebook",
-    color: "text-[#3b5998] hover:bg-[#2d4373]",
+    color: "#3b5998",
   },
   {
     key: "github",
     url: data.social.github,
-    icon: "fa-brands fa-github",
+    icon: <i className="fa-brands fa-github" />,
     label: "GitHub",
-    color: "text-black hover:bg-black",
+    color: "#181717",
   },
   {
     key: "gmail",
     url: data.social.gmail,
-    icon: "fab fa-google",
+    icon: <i className="fab fa-google" />,
     label: "Gmail",
-    color: "text-[#db4437] hover:bg-[#c1351d]",
+    color: "#db4437",
   },
   {
     key: "whatsapp",
     url: data.social.whatsapp,
-    icon: "fa-brands fa-whatsapp",
+    icon: <i className="fa-brands fa-whatsapp" />,
     label: "WhatsApp",
-    color: "text-[#25d366] hover:bg-[#1ebe57]",
+    color: "#25d366",
   },
 ];
 
@@ -94,24 +95,13 @@ function Home({ activeSection, onNavigate, sections }) {
       </div>
 
       <div className="mt-8 pt-6 md:mt-auto">
-        <div className="flex flex-wrap gap-3">
-          {socialButtons.map((button) => (
-            <a
-              key={button.key}
-              href={button.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={button.label}
-              className="flex items-center justify-center rounded-2xl px-1 py-1 text-white transition-all hover:bg-white/5"
-            >
-              <span
-                className={`flex h-8 w-8 items-center justify-center rounded-lg bg-white text-sm shadow-[0_4px_10px_rgba(0,0,0,0.25)] ${button.color}`}
-              >
-                <i className={button.icon} />
-              </span>
-            </a>
-          ))}
-        </div>
+        <Dock
+          items={socialButtons}
+          baseItemSize={34}
+          magnification={54}
+          panelHeight={46}
+          dockHeight={86}
+        />
       </div>
     </div>
   );
