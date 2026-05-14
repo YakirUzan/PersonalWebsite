@@ -20,6 +20,10 @@ const iconTitles = {
   pycharm: "PyCharm",
   visualstudio: "Visual Studio",
   webstorm: "WebStorm",
+  react: "React",
+  aws: "AWS",
+  vscode: "Visual Studio Code",
+  codex: "Codex",
 };
 
 function SkillComponent({ extra }) {
