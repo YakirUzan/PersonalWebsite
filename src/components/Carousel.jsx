@@ -24,7 +24,7 @@ function CarouselItem({
 
   return (
     <motion.figure
-      className="relative m-0 flex aspect-[9/16] shrink-0 cursor-grab overflow-hidden rounded-[18px] border border-white/12 bg-white/10 shadow-[0_16px_30px_rgba(0,0,0,0.24)] active:cursor-grabbing"
+      className="relative m-0 flex aspect-9/16 shrink-0 cursor-grab overflow-hidden rounded-[18px] border border-white/12 bg-white/10 shadow-[0_16px_30px_rgba(0,0,0,0.24)] active:cursor-grabbing"
       style={{
         width: itemWidth,
         rotateY,
@@ -216,7 +216,7 @@ function Carousel({
     <div ref={wrapperRef} className="flex w-full justify-center">
       <div
         ref={containerRef}
-        className="relative overflow-hidden rounded-[24px] border border-white/12 bg-black/20 p-4"
+        className="relative overflow-hidden rounded-3xl border border-white/12 bg-black/20 p-4"
         style={{ width: `${containerWidth}px` }}
       >
         <motion.div
