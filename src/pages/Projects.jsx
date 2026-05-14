@@ -25,8 +25,8 @@ function Projects() {
             key={project.name}
             className="rounded-3xl border border-white/12 bg-black/28 px-5 pt-8 pb-5 shadow-[0_18px_36px_rgba(0,0,0,0.24)] md:px-6 md:pt-9 md:pb-6"
           >
-            <div className="grid h-full gap-8 md:grid-cols-[1.05fr_0.95fr] md:items-center">
-              <div>
+            <div className="grid h-full min-w-0 gap-8 md:grid-cols-[1.05fr_0.95fr] md:items-center">
+              <div className="min-w-0">
                 <div className="flex items-center justify-start gap-2.5">
                   <img
                     src={project.icon}

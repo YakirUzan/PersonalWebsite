@@ -61,10 +61,10 @@ function Carousel({
 
   const safeItems = items ?? [];
   const containerWidth = Math.max(
-    220,
+    0,
     Math.min(baseWidth, availableWidth || baseWidth),
   );
-  const itemWidth = containerWidth - CONTAINER_PADDING * 2;
+  const itemWidth = Math.max(120, containerWidth - CONTAINER_PADDING * 2);
   const trackItemOffset = itemWidth + GAP;
 
   const itemsForRender = useMemo(() => {
@@ -213,10 +213,10 @@ function Carousel({
   }
 
   return (
-    <div ref={wrapperRef} className="flex w-full justify-center">
+    <div ref={wrapperRef} className="flex w-full min-w-0 justify-center">
       <div
         ref={containerRef}
-        className="relative overflow-hidden rounded-3xl border border-white/12 bg-black/20 p-4"
+        className="relative max-w-full overflow-hidden rounded-3xl border border-white/12 bg-black/20 p-4"
         style={{ width: `${containerWidth}px` }}
       >
         <motion.div

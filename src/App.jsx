@@ -93,7 +93,11 @@ function App() {
   const handleAppWheel = (event) => {
     const scroller = mainRef.current;
 
-    if (!scroller || scroller.contains(event.target)) {
+    if (
+      !scroller ||
+      scroller.contains(event.target) ||
+      event.target.closest("[data-app-no-scroll-proxy]")
+    ) {
       return;
     }
 
@@ -104,7 +108,11 @@ function App() {
   const handleAppTouchStart = (event) => {
     const scroller = mainRef.current;
 
-    if (!scroller || scroller.contains(event.target)) {
+    if (
+      !scroller ||
+      scroller.contains(event.target) ||
+      event.target.closest("[data-app-no-scroll-proxy]")
+    ) {
       touchStartYRef.current = null;
       return;
     }
@@ -153,7 +161,7 @@ function App() {
       <div className="pointer-events-none fixed inset-0 z-0 bg-black/45" />
 
       <div className="relative z-10 flex h-full w-full flex-col overflow-hidden md:flex-row">
-        <aside className="shrink-0 overflow-hidden p-4 md:h-full md:w-19/50 md:self-start md:p-6 lg:w-17/50">
+        <aside className="shrink-0 overflow-hidden md:h-full md:w-19/50 md:self-start md:p-6 lg:w-17/50">
           <Home
             activeSection={activeSection}
             onNavigate={scrollToSection}
