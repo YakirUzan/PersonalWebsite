@@ -1,8 +1,24 @@
 @import "tailwindcss";
 
+:root {
+  color-scheme: light dark;
+}
+
 html,
 body,
 #root {
   height: 100%;
   overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+  }
 }
